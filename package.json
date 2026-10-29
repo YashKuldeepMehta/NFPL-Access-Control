@@ -1,0 +1,23 @@
+{
+  "name": "nfpl-access-control",
+  "version": "1.0.0",
+  "private": true,
+  "description": "Access Control Service (Nagarkot take-home): backend + thin React UI",
+  "scripts": {
+    "install:all": "npm --prefix backend install && npm --prefix frontend install && npm install",
+    "migrate": "npm --prefix backend run migrate",
+    "seed": "npm --prefix backend run seed",
+    "seed:scale": "npm --prefix backend run seed:scale",
+    "readme:access": "npm --prefix backend run readme:access",
+    "test": "npm --prefix backend test",
+    "dev:backend": "npm --prefix backend run dev",
+    "dev:frontend": "npm --prefix frontend run dev",
+    "dev": "concurrently -n api,ui -c blue,green \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "docker:up": "docker compose up -d --build",
+    "docker:down": "docker compose down",
+    "docker:logs": "docker compose logs -f"
+  },
+  "devDependencies": {
+    "concurrently": "^9.0.1"
+  }
+}

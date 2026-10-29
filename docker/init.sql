@@ -1,0 +1,1 @@
+CREATE DATABASE nfpl_test;
